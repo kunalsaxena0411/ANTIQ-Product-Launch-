@@ -4,9 +4,9 @@
   "description": "",
   "type": "module",
  "scripts": {
-  "dev": "node_modules/.bin/vite",
-  "build": "node_modules/.bin/vite build",
-  "preview": "node_modules/.bin/vite preview"
+  "dev": "vite",
+  "build": "npm install && vite build",
+  "preview": "vite preview"
 },
   "dependencies": {
     "gsap": "^3.12.7",
