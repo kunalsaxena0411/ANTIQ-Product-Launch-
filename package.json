@@ -12,7 +12,8 @@
     "three": "^0.175.0"
   },
   "devDependencies": {},
-  "engines": {
-    "node": "16.x"
-  }
+ "engines": {
+  "node": "22.x"
+}
+
 }
