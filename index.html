@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AntiQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap');
+    .geist-font {
+      font-family: 'Geist Mono', monospace;
+    }
+    /* Canvas Styling */
+    #webgl {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -10;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen px-8 py-6 font-sans">
+  
+  <div id="loading-screen">
+    <div class="loader">Loading...</div>
+  </div>
+  <style>
+    #loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* or any background */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+  </style>
+  <!-- 3D Model Canvas -->
+  <canvas id="webgl"></canvas>
+
+  <!-- Navbar -->
+  <header class="w-full flex justify-between items-center mb-24 sticky top-0 z-50 bg-black py-4">
+    <div class="flex items-center">
+      <img src="antiailogo2.jpg" alt="Logo" class="w-20 h-20" />
+    </div>
+    <nav class="flex gap-4 items-center">
+      <a href="#" class="text-white text-lg hover:underline">Home</a>
+      <a href="#about" class="text-white text-lg hover:underline">Product Feature</a>
+      <a href="#contact" class="text-white text-lg hover:underline">Contact</a>
+      <a href="#cart" class="text-white text-3xl ml-2 opacity-100 hover:scale-110 transition">🛒</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <!-- Main Content -->
+<main class="text-center geist-font">
+  <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold mb-12 leading-tight animate-fade-in gradient-text">
+    Turn up the volume.<br />Launching soon
+  </h1>
+
+  <div class="flex flex-wrap gap-6 justify-center">
+    <a href="#cart">
+      <button class="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-200 transition">
+        Add to Cart
+      </button>
+    </a>
+    <a href="#about">
+      <button class="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-200 transition">
+        Know More About It
+      </button>
+    </a>
+  </div>
+</main>
+
+<style>
+  .gradient-text {
+    background: linear-gradient(to right, #ffffff, #aaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+</style>
+
+
+  <!-- About ANTIQ Section -->
+  <section id="about" class="mt-40 max-w-4xl mx-auto px-6 text-white">
+    <h2 class="text-5xl font-bold mb-6 text-center geist-font  golden-neon">About ANTIQ</h2>
+    <p class="text-lg mb-6 text-left">
+      <strong>ANTIQ</strong> is a retro-inspired, handcrafted music player by Anti AI, designed for the modern listener craving vintage nostalgia.
+      This Bluetooth-enabled audio device combines classic design with advanced AI-driven features, offering a unique fusion of old-school style and smart technology.
+    </p>
+    <p class="text-lg mb-6 text-left">
+      Created for those seeking an immersive, nostalgic listening experience, ANTIQ is set to launch soon, promising to blend timeless aesthetics with the latest innovations in audio.
+    </p>
+    <p class="text-base text-left italic">Serverless, Retro, Nostalgia</p>
+  </section>
+  <style>
+    /* Improved Golden Neon Text Effect */
+    .golden-neon {
+      color: white;
+      text-shadow: 
+        0 0 5px #FFD700, 
+        0 0 10px #FFD700, 
+        0 0 15px #FFD700, 
+        0 0 20px #FFCC00, 
+        0 0 25px #FFCC00, 
+        0 0 30px #FFCC00, 
+        0 0 35px #FFCC00, 
+        0 0 40px rgba(0, 0, 0, 0.5); /* Darker shadow to improve readability */
+      animation: neonGlow 1.5s ease-in-out infinite alternate;
+    }
+  
+    @keyframes neonGlow {
+      0% {
+        text-shadow: 
+          0 0 5px #FFD700, 
+          0 0 10px #FFD700, 
+          0 0 15px #FFD700, 
+          0 0 20px #FFCC00, 
+          0 0 25px #FFCC00, 
+          0 0 30px #FFCC00, 
+          0 0 35px #FFCC00, 
+          0 0 40px rgba(0, 0, 0, 0.5); /* Darker shadow */
+      }
+      50% {
+        text-shadow: 
+          0 0 10px #FFD700, 
+          0 0 20px #FFD700, 
+          0 0 30px #FFD700, 
+          0 0 40px #FFCC00, 
+          0 0 50px #FFCC00, 
+          0 0 60px #FFCC00, 
+          0 0 70px #FFCC00, 
+          0 0 80px rgba(0, 0, 0, 0.5); /* Darker shadow */
+      }
+      100% {
+        text-shadow: 
+          0 0 5px #FFD700, 
+          0 0 10px #FFD700, 
+          0 0 15px #FFD700, 
+          0 0 20px #FFCC00, 
+          0 0 25px #FFCC00, 
+          0 0 30px #FFCC00, 
+          0 0 35px #FFCC00, 
+          0 0 40px rgba(0, 0, 0, 0.5); /* Darker shadow */
+      }
+    }
+  </style>
+<!-- Cart Section -->
+<section id="cart" class="w-full max-w-3xl mx-auto mt-24 text-center geist-font">
+  <h2 class="text-4xl font-bold mb-8">Your AntiQ Pre-Launch Cart</h2>
+  <div class="rounded-xl p-8"> <!-- Removed background and blur classes -->
+    <div class="w-64 mx-auto mb-4">
+      <img src="antiqimg.jpg" alt="AntiQ Product" class="w-full rounded-lg shadow-lg" />
+    </div>
+    <div class="bg-white/20 text-white px-6 py-2 text-lg font-semibold shadow-md mb-6 w-fit mx-auto">Rs. 2000</div>
+    <div class="flex items-center justify-center gap-6 mb-8">
+      <button class="text-3xl bg-white/20 text-white w-10 h-10 rounded-full font-bold hover:bg-white/30 transition">-</button>
+      <span class="text-2xl font-semibold">1</span>
+      <button class="text-3xl bg-white/20 text-white w-10 h-10 rounded-full font-bold hover:bg-white/30 transition">+</button>
+    </div>
+    <div class="flex flex-col md:flex-row gap-4 justify-center">
+      <button class="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-900 transition">Add to Cart</button>
+      <button class="bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Connect Section -->
+  <section id="contact" class="w-full px-4 py-24 flex justify-center items-center">
+    <div class="container bg-transparent p-10 flex flex-col md:flex-row gap-12 max-w-5xl w-full text-white">
+      <div class="left-section flex flex-col justify-start">
+        <div class="logo mb-6">
+          <img src="antiailogo2.jpg" alt="ANTI AI Logo" class="h-12" />
+        </div>
+        <div class="connect-text text-4xl font-bold leading-snug mb-4">Let's<br />Connect!</div>
+        <p class="mission-text text-gray-300 mb-6 leading-relaxed">
+          We're dedicated to safeguarding the future of humanity through ethical
+          and responsible AI development. If you share our vision or have any
+          inquiries, we'd love to hear from you.
+        </p>
+        <div class="social-icons flex gap-4">
+          <a href="https://linkedin.com" target="_blank" class="bg-white/40 rounded-full p-2 hover:bg-white/55 transition">
+            <img src="linkedin_logo.png" alt="LinkedIn" class="h-6" />
+          </a>
+          <a href="https://instagram.com" target="_blank" class="bg-white/40 rounded-full p-2 hover:bg-white/55 transition">
+            <img src="insta_logo.png" alt="Instagram" class="h-6" />
+          </a>
+          <a href="https://twitter.com" target="_blank" class="bg-white/40 rounded-full p-2 hover:bg-white/55 transition">
+            <img src="twitter_logo.png" alt="Twitter" class="h-6" />
+          </a>
+        </div>
+      </div>
+      <div class="right-section flex flex-col gap-5 w-full md:w-1/2">
+        <div class="form-group flex flex-col">
+          <label for="name" class="text-gray-300 mb-1">Name</label>
+          <input type="text" id="name" name="name" class="bg-[#333] text-white px-4 py-3 rounded-lg border border-[#555]" />
+        </div>
+        <div class="form-group flex flex-col">
+          <label for="email" class="text-gray-300 mb-1">Email Address</label>
+          <input type="email" id="email" name="email" class="bg-[#333] text-white px-4 py-3 rounded-lg border border-[#555]" />
+        </div>
+        <div class="form-group flex flex-col">
+          <label for="phone" class="text-gray-300 mb-1">Phone Number</label>
+          <input type="tel" id="phone" name="phone" class="bg-[#333] text-white px-4 py-3 rounded-lg border border-[#555]" />
+        </div>
+        <div class="form-group flex flex-col">
+          <label for="message" class="text-gray-300 mb-1">Your Message</label>
+          <textarea id="message" name="message" rows="4" class="bg-[#333] text-white px-4 py-3 rounded-lg border border-[#555] resize-y"></textarea>
+        </div>
+        <button type="submit" class="bg-[#555] hover:bg-[#777] text-white py-3 px-6 rounded-lg text-lg font-medium transition">
+          Submit
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Your 3D Scene Script -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

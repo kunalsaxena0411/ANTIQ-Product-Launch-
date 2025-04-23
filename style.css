@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: white;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+canvas#webgl {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.panel {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vw;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.panel h1, .panel h2, .panel p, .panel button {
+  max-width: 600px;
+  pointer-events: auto;
+}
+
+.panel button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #ff0051;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.panel button:hover {
+  background: #e60047;
+}
+
+.parallax {
+  position: relative;
+  z-index: 3;
+  transform: translateY(0);
+  transition: transform 0.2s ease-out;
+}
+
