@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "vite",
+    "dev": "npx vite",
     "build": "npx vite build",
-    "preview": "vite preview"
+    "preview": "npx vite preview"
   },
   "dependencies": {
-    "vite": "^4.0.0",
     "gsap": "^3.12.7",
     "three": "^0.175.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
   },
   "engines": {
     "node": "16.x"
   }
 }
+
