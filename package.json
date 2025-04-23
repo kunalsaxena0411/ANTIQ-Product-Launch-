@@ -8,11 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "vite": "^4.0.0",
     "gsap": "^3.12.7",
     "three": "^0.175.0"
-  },
-  "devDependencies": {
-    "vite": "^4.0.0"
   },
   "engines": {
     "node": "16.x"

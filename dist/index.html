@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AntiQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist+Mono&display=swap');
+    .geist-font {
+      font-family: 'Geist Mono', monospace;
+    }
+    /* Canvas Styling */
+    #webgl {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -10;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-eecefdb7.js"></script>
+</head>
+<body class="bg-black text-white min-h-screen px-8 py-6 font-sans">
+  
+  <div id="loading-screen">
+    <div class="loader">Loading...</div>
+  </div>
+  <style>
+    #loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* or any background */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+  </style>
+  <!-- 3D Model Canvas -->
+  <canvas id="webgl"></canvas>
+
+  <!-- Navbar -->
+  <header class="w-full flex justify-between items-center mb-24 sticky top-0 z-50 bg-black py-4">
+    <div class="flex items-center">
+      <img src="/assets/antiailogo2-5d954a2e.jpg" alt="Logo" class="w-20 h-20" />
+    </div>
+    <nav class="flex gap-4 items-center">
+      <a href="#" class="text-white text-lg hover:underline">Home</a>
+      <a href="#about" class="text-white text-lg hover:underline">Product Feature</a>
+      <a href="#contact" class="text-white text-lg hover:underline">Contact</a>
+      <a href="#cart" class="text-white text-3xl ml-2 opacity-100 hover:scale-110 transition">🛒</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <!-- Main Content -->
+<main class="text-center geist-font">
+  <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold mb-12 leading-tight animate-fade-in gradient-text">
+    Turn up the volume.<br />Launching soon
+  </h1>
+
+  <div class="flex flex-wrap gap-6 justify-center">
+    <a href="#cart">
+      <button class="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-200 transition">
+        Add to Cart
+      </button>
+    </a>
+    <a href="#about">
+      <button class="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-200 transition">
+        Know More About It
+      </button>
+    </a>
+  </div>
+</main>
+
+<style>
+  .gradient-text {
+    background: linear-gradient(to right, #ffffff, #aaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+</style>
+
+
+  <!-- About ANTIQ Section -->
+  <section id="about" class="mt-40 max-w-4xl mx-auto px-6 text-white">
+    <h2 class="text-5xl font-bold mb-6 text-center geist-font  golden-neon">About ANTIQ</h2>
+    <p class="text-lg mb-6 text-left">
+      <strong>ANTIQ</strong> is a retro-inspired, handcrafted music player by Anti AI, designed for the modern listener craving vintage nostalgia.
+      This Bluetooth-enabled audio device combines classic design with advanced AI-driven features, offering a unique fusion of old-school style and smart technology.
+    </p>
+    <p class="text-lg mb-6 text-left">
+      Created for those seeking an immersive, nostalgic listening experience, ANTIQ is set to launch soon, promising to blend timeless aesthetics with the latest innovations in audio.
+    </p>
+    <p class="text-base text-left italic">Serverless, Retro, Nostalgia</p>
+  </section>
+  <style>
+    /* Improved Golden Neon Text Effect */
+    .golden-neon {
+      color: white;
+      text-shadow: 
+        0 0 5px #FFD700, 
+        0 0 10px #FFD700, 
+        0 0 15px #FFD700, 
+        0 0 20px #FFCC00, 
+        0 0 25px #FFCC00, 
+        0 0 30px #FFCC00, 
+        0 0 35px #FFCC00, 
+        0 0 40px rgba(0, 0, 0, 0.5); /* Darker shadow to improve readability */
+      animation: neonGlow 1.5s ease-in-out infinite alternate;
+    }
+  
+    @keyframes neonGlow {
+      0% {
+        text-shadow: 
+          0 0 5px #FFD700, 
+          0 0 10px #FFD700, 
+          0 0 15px #FFD700, 
+          0 0 20px #FFCC00, 
+          0 0 25px #FFCC00, 
+          0 0 30px #FFCC00, 
+          0 0 35px #FFCC00, 
+          0 0 40px rgba(0, 0, 0, 0.5); /* Darker shadow */
+      }
+      50% {
+        text-shadow: 
+          0 0 10px #FFD700, 
+          0 0 20px #FFD700, 
+          0 0 30px #FFD700, 
+          0 0 40px #FFCC00, 
+          0 0 50px #FFCC00, 
+          0 0 60px #FFCC00, 
+          0 0 70px #FFCC00, 
+          0 0 80px rgba(0, 0, 0, 0.5); /* Darker shadow */
+      }
+      100% {
+        text-shadow: 
+          0 0 5px #FFD700, 
+          0 0 10px #FFD700, 
+          0 0 15px #FFD700, 
+          0 0 20px #FFCC00, 
+          0 0 25px #FFCC00, 
+          0 0 30px #FFCC00, 
+          0 0 35px #FFCC00, 
+          0 0 40px rgba(0, 0, 0, 0.5); /* Darker shadow */
+      }
+    }
+  </style>
+<!-- Cart Section -->
+<section id="cart" class="w-full max-w-3xl mx-auto mt-24 text-center geist-font">
+  <h2 class="text-4xl font-bold mb-8">Your AntiQ Pre-Launch Cart</h2>
+  <div class="rounded-xl p-8"> <!-- Removed background and blur classes -->
+    <div class="w-64 mx-auto mb-4">
+      <img src="/assets/antiqimg-d374ca7e.jpg" alt="AntiQ Product" class="w-full rounded-lg shadow-lg" />
+    </div>
+    <div class="bg-white/20 text-white px-6 py-2 text-lg font-semibold shadow-md mb-6 w-fit mx-auto">Rs. 2000</div>
+    <div class="flex items-center justify-center gap-6 mb-8">
+      <button class="text-3xl bg-white/20 text-white w-10 h-10 rounded-full font-bold hover:bg-white/30 transition">-</button>
+      <span class="text-2xl font-semibold">1</span>
+      <button class="text-3xl bg-white/20 text-white w-10 h-10 rounded-full font-bold hover:bg-white/30 transition">+</button>
+    </div>
+    <div class="flex flex-col md:flex-row gap-4 justify-center">
+      <button class="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-900 transition">Add to Cart</button>
+      <button class="bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Connect Section -->
+  <section id="contact" class="w-full px-4 py-24 flex justify-center items-center">
+    <div class="container bg-transparent p-10 flex flex-col md:flex-row gap-12 max-w-5xl w-full text-white">
+      <div class="left-section flex flex-col justify-start">
+        <div class="logo mb-6">
+          <img src="/assets/antiailogo2-5d954a2e.jpg" alt="ANTI AI Logo" class="h-12" />
+        </div>
+        <div class="connect-text text-4xl font-bold leading-snug mb-4">Let's<br />Connect!</div>
+        <p class="mission-text text-gray-300 mb-6 leading-relaxed">
+          We're dedicated to safeguarding the future of humanity through ethical
+          and responsible AI development. If you share our vision or have any
+          inquiries, we'd love to hear from you.
+        </p>
+        <div class="social-icons flex gap-4">
+          <a href="https://linkedin.com" target="_blank" class="bg-white/40 rounded-full p-2 hover:bg-white/55 transition">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACpElEQVR4nO1az2sTQRQef4KiVhOW7Pft7AYCogQ9RQS9e1L0pF49ePHepuBBBIsXxUv9C7yK9CYIVsQiiB70JCLiQbGgSGmraEVt5MlbCCHdbGuXzOJ8sJC8fTPzvpn33kzmxRgPD481geQJANMkv5LsDPn5IrZEUXR8VSQATDhgfKffA+BK7pXQBkskR5MkgRkykiQByTG1qZNrZQA8UPajxjEAaOskTw9UFn8U5SAIQuMYgiAIdZIXByqnvmgcBfPa918QIXmE5F2SHwHMkpyq1WoHijC4MCKazX71SYffAbRMWYgAeKGGT9Tr9d1BEOyQnK6y+0UZXsSKLKjR21NZpVLZpfoLpkREHuq7q41GY0RIALis5J4UZXgRrtUC8K1PjCyFYXjIlClrRVG0l+QtAO8AfChl1nIFXAfXepxxKp3Jo9NqtbaQPEvyDoD34pYA5iUjArgOYH/hRAYdr/PoAHg1QOcngBvGmM2FE8mS55yElwDOh2FYbzabW6vV6k6SRwHcBPBDdaaMMRudIyK7P8llkpdWMlBgrT1M8pOu3rhzRKIoOk3yTJdo00rjAzimROZlv3KKiECONSQnAXxWQ2cBXBPX6tPnPe3rglNE5FgD4HlXnPzu+vzMWrutp89zSva2a0QuqmGvrbUHJStpPLxVebunz30qf+MUEZl1fXeyh+AplT/tljcajZE0TpwiAmBO5EmS7OmWy3c1eK6nyQbta9kpIlmD/8t4mfBEjF+RjnetLPgYMT5GOj5GslDkL8Ss8fK24TpsiDMZAz7Kq7OWfteViCvgKogs6gFv6CW3Xlhro9xXtFrJFeUx4xgAjOcuvUmhUZXlzqkdxzHNkBHHMYVEesuSu0ydlgtKXZ5OIazVzf4WR0v5hwEPDw+T4g+5BlPEwdnXKQAAAABJRU5ErkJggg==" alt="LinkedIn" class="h-6" />
+          </a>
+          <a href="https://instagram.com" target="_blank" class="bg-white/40 rounded-full p-2 hover:bg-white/55 transition">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD7ElEQVR4nO1ZSU8UQRSuA25RQWdCpr6ve5hkgoJ4cEFvLvEmMRH5Bca4/AH3M+rVaDxK9A8oJp4UVPSG3sXlouBVUHA5ueQNr0PH0Ex1T8/0mMyXdDLpqXpVX9ertxrTQgvZg2QPgIsAxklOkfxG8k9Kj8iaAjAG4ALJrakTsNbuAfAkxU07PQDGAfTXTKC/v38VgFskf6vgzyRvkzwqp1MoFNan8qWMMSKLiyc+CGBE1/qja980xrQlEtzV1bUZwFMV9h3AcC6XazcNQi6XawdwBcCP4HRKpdKmJCdRUSUAn0S1TEbwPG8HyQ/6QZ/39fWtdp6s6iQkpovFIk3GKBaLBDCjZG44TZKvr3r5neQu0yQAsFvV7Jf8dpkQqNSwaTKQvKp7G6s2sCewTo282AE8zzsid1LUyFo78O//5XK5A8Cs7NHzvC2RgsTZKZGRem86Yv2ZkA+ZjhhzR8ecX0nQmAoZrOeGayQypGMeryTorQ5KHB6I/yF5guQDAG809Pimv0flPxmz3Fxr7YCQERLW2sNV1P9N5CZIzsugfD6/MS4B3/fXAbgM4ItD6DEH4FKpVFobd518Pr9R5cyvRKSyUBI7T/JVaLOPAJwKwhh5APTqu8ehcS+T+ClW22cSIuqspoPjBrCv2hwA+wM1TuJ0mTYRUafgJAA8ixML6V2a0LmTcdSMaRORO6FzpmIHdEuBaXAyFzMhopuoXGwXdYqCtfZgYAC6IqxZXYmoia1cbFMjAv9F8ngWREb1S540NQLAaV37XsOJhJxnT4w9R8nqrerk6ngiCzK2s7Nzg6kRIkPXXviviUikrWt/dVy7pVorXfZTpkYAOJPZZeeS+Y0Opx2hBb9szK86xDkZb609YBLC87xDgUMsOUYHdQtRxBS7euVlPsa7qhlfvYlIoCehuM6biEPG9/0cyRdNETQuE8a/k9jJOKgTgPdNE8b/Q2YylAFKRf2MtXab+Bl55Le8C13syknUK7GaT5rqimpoy2HOMdW90N3dvaYuqS5SKD6I5REzSvK+9lAW9JnSd8eT5C6xig9Zl4NcECoHRacP2inKrEDnAgB3lcjZpi2ZVoNzyVQQWBVpspgmA8lrzlmp9OykrSAlfKfyfYNgF/uYP6WtQHKn0yTp2empzPi+75mM4fu+F6oLX48zty2kYtJ622syAsmdJD8GjjZ2U1RsfYiMdIquymUzDUK5XO6QO6HqVEkXavE/bdKzU70UQrPSnwBwTAoGaaS5AUQWFuvDQ7pGxTrp2tcTt6fDKBQK2wE8rBZ6pP1gMWZL3+CI7Za8QSvqQfiR1sZF1msxrSTP+b7fnTqBFlowsfEXc8lgcYNk3goAAAAASUVORK5CYII=" alt="Instagram" class="h-6" />
+          </a>
+          <a href="https://twitter.com" target="_blank" class="bg-white/40 rounded-full p-2 hover:bg-white/55 transition">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADQklEQVR4nO2ZX4hMURzHD3aR/2bM3vP9njszmsbLSMmISEkp5e8Dkvx5YV9ECSXxwgtJbZEQ8eRF2fZBhAh5ITZkk5KotcifXf9arLU67R0dmzFnZ+6duWk+dWu699zf73znnPM75/e7QlSpUqXK/8IAkudJ9hS4fiql5vvtHMA6w8f1dDo9pGhjrusqAO8LiQHwwnXdiI8i5pHs8uw/SiQSY0s2KqVcYzEq+jrthwjHcSYC6PBsvnFdNy38AsAZSzErSvGTSCRA8rk3yp0kZwg/ATCO5EuLKdaulHKL8RGLxUYAaM6tOwArRRCQXGQ5Khd1oOin+UEkmwwb20SQADhpIwZAfX/skjxkvH9cBE0kEhlF8pmFmM+2i5TkFuO9C0KIGlEOAMwi2W0h5qaeMgVELCT5w2v/MJVKjS6LCKMDDZbrZWs+GwCyeuRy+xDJuCg3epfV/6DFWvnquu6kvu87jjOe5Cuv3SeSk0WlADAFwHcLMc2ZTGawuc4APPCe62m1WFQaALsto9ge3T6bzdYCuGzc3yhCQg3J2xZiupRS0wEcNUQcEGFCSpnxjhOFxHw0fjcKIQaKsME/94JC1x3HcYaLkDKQ5DUbIUqpZSLMOL0h9YPFwm/1Jb8IEgDrLaPYKRF2SDbaiJFSLhVhJh6PE8A3CzGvpZQxEVZI7utHBGsSYQRAvdHJL5ZRbK0IE0qpObkpBeCJzkdy+XeBhd8BICFCtLu3ex17q5SaoO+TnKvzbwsxV4pIj/3lL5WPmeZzAIctQ/ImUSkADANwy6h8rMrT5rGFkE5d06rUseR35QPA9nwNdX3KSGn/eQ7LZrO1ZVVB8qDRgRMW7fdahuRd5VHQO102GyNx1cwA86HbALhnIaRLSjk1cBFKqQXGNGlJJpNj+lnXtcldWpLJ5NDARPSpfLQVE/8B7LCMYvsDEeF9YmjN7dqu604rIUjcsBDTLaWc7asIr/JxP+cAwJJS7NXV1aW8MlAhMU+j0ehIX0TocEjykt8bF8kNllHsmB/+9Jw+YhhtEOX/tNejA0xJnkjuNEbiXKFabpG5yzuLhd9GMlqUE6XUcuPAdzeoyoeUcrXlFDsbhP8qVapUERXhF+1Fj5MUxJrBAAAAAElFTkSuQmCC" alt="Twitter" class="h-6" />
+          </a>
+        </div>
+      </div>
+      <div class="right-section flex flex-col gap-5 w-full md:w-1/2">
+        <div class="form-group flex flex-col">
+          <label for="name" class="text-gray-300 mb-1">Name</label>
+          <input type="text" id="name" name="name" class="bg-[#333] text-white px-4 py-3 rounded-lg border border-[#555]" />
+        </div>
+        <div class="form-group flex flex-col">
+          <label for="email" class="text-gray-300 mb-1">Email Address</label>
+          <input type="email" id="email" name="email" class="bg-[#333] text-white px-4 py-3 rounded-lg border border-[#555]" />
+        </div>
+        <div class="form-group flex flex-col">
+          <label for="phone" class="text-gray-300 mb-1">Phone Number</label>
+          <input type="tel" id="phone" name="phone" class="bg-[#333] text-white px-4 py-3 rounded-lg border border-[#555]" />
+        </div>
+        <div class="form-group flex flex-col">
+          <label for="message" class="text-gray-300 mb-1">Your Message</label>
+          <textarea id="message" name="message" rows="4" class="bg-[#333] text-white px-4 py-3 rounded-lg border border-[#555] resize-y"></textarea>
+        </div>
+        <button type="submit" class="bg-[#555] hover:bg-[#777] text-white py-3 px-6 rounded-lg text-lg font-medium transition">
+          Submit
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Your 3D Scene Script -->
+  
+</body>
+</html>
